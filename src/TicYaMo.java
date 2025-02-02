@@ -16,11 +16,11 @@ public class TicYaMo {
     public void zeichneSpiel() {
         System.out.println("   | A | B | C |");
         System.out.println("---+---+---+---┤");
-        System.out.println(" 1 |   |   |   |");
+        System.out.println(" 1 | " + a1 + " | " + b1 + " | " + c1 + " |");
         System.out.println("---+---+---+---┤");
-        System.out.println(" 2 |   |   |   |");
+        System.out.println(" 2 | " + a2 + " | " + b2 + " | " + c2 + " |");
         System.out.println("---+---+---+---┤");
-        System.out.println(" 3 |   |   |   |");
+        System.out.println(" 3 | " + a3 + " | " + b3 + " | " + c3 + " |");
         System.out.println("---------------┘");
     }
 }
