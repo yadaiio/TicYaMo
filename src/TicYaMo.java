@@ -1,3 +1,4 @@
+import java.util.Scanner;
 //Ansammlung von den Funktionen, die TicYAMo generell können sollte.
 public class TicYaMo {
 
@@ -15,13 +16,14 @@ public class TicYaMo {
     //Der eigentliche Spieler
     public String player = "x";
 
+    tools tool = new tools();
+    Scanner nextTurnScanner = new Scanner(System.in);
+
     //Methode zum Spiel zeichnen
     public void zeichneSpiel() {
 
-        //Für die 50 Zeilenumbrüch, da Java nicht clearen kann
-        for(int i = 0;i > 50;i++) {
-            System.out.println(" ");
-        }
+        //Aufruf der Methode "clear" des Klassenobjekts "tool" -> Klasse: tool
+        tool.clear();
 
         System.out.println( " " + player + " | A | B | C |");
         System.out.println("---+---+---+---┤");
@@ -31,5 +33,23 @@ public class TicYaMo {
         System.out.println("---+---+---+---┤");
         System.out.println(" 3 | " + a3 + " | " + b3 + " | " + c3 + " |");
         System.out.println("---------------┘");
+
+        System.out.println("Bitte gib deinen weiteren Spielzug ein (Beispiel: A2)");
+    }
+
+    public void nextTurn() {
+        String spielzug = nextTurnScanner.nextLine();
+
+        if(spielzug.equals ("a1") || spielzug.equals("A1")) {
+            a1 = player; 
+        }
+
+        if(spielzug.equals ("a2") || spielzug.equals("A2")) {
+            a2 = player; 
+        }
+
+        if(spielzug.equals ("a3") || spielzug.equals("A3")) {
+            a3 = player; 
+        }
     }
 }
