@@ -41,15 +41,30 @@ public class TicYaMo {
         String spielzug = nextTurnScanner.nextLine();
 
         if(spielzug.equals ("a1") || spielzug.equals("A1")) {
-            a1 = player; 
+            a1 = player;
+            changePlayer(); 
         }
 
         if(spielzug.equals ("a2") || spielzug.equals("A2")) {
-            a2 = player; 
+            a2 = player;
+            changePlayer();
         }
 
         if(spielzug.equals ("a3") || spielzug.equals("A3")) {
-            a3 = player; 
+            a3 = player;
+            changePlayer();
+        }
+    }
+
+    public void changePlayer() {
+
+        //Abwechslung des Spielers, Anzeig links oben
+        if(player.equals("x")){
+            player = "o";
+        }
+
+        else if(player.equals("o")){
+            player = "x";
         }
     }
 }
