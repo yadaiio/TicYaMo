@@ -4,6 +4,19 @@ public class main {
         TicYaMo spiel = new TicYaMo();
         
         spiel.zeichneSpiel();
+        spiel.nextTurn();
+        
+        spiel.zeichneSpiel();
+        spiel.nextTurn();
+        
+        spiel.zeichneSpiel();
+        spiel.nextTurn();
+        
+        spiel.zeichneSpiel();
+        spiel.nextTurn();
+        
+        spiel.zeichneSpiel();
+        spiel.nextTurn();
         
     }
 }

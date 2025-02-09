@@ -40,17 +40,19 @@ public class TicYaMo {
     public void nextTurn() {
         String spielzug = nextTurnScanner.nextLine();
 
-        if(spielzug.equals ("a1") || spielzug.equals("A1")) {
-            a1 = player;
-            changePlayer(); 
+        if(spielzug.equals("a1") || spielzug.equals("A1")) {
+            if (a1 == " ") {
+                a1 = player;
+                changePlayer();   
+            } 
         }
 
-        if(spielzug.equals ("a2") || spielzug.equals("A2")) {
+        if(spielzug.equals("a2") || spielzug.equals("A2")) {
             a2 = player;
             changePlayer();
         }
 
-        if(spielzug.equals ("a3") || spielzug.equals("A3")) {
+        if(spielzug.equals("a3") || spielzug.equals("A3")) {
             a3 = player;
             changePlayer();
         }
