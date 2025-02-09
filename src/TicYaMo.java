@@ -40,21 +40,59 @@ public class TicYaMo {
     public void nextTurn() {
         String spielzug = nextTurnScanner.nextLine();
 
-        if(spielzug.equals("a1") || spielzug.equals("A1")) {
-            if (a1 == " ") {
-                a1 = player;
-                changePlayer();   
-            } 
+        //Der Vergleich ob das Feld leer ist und ob die Eingabe den Namen des Feldes gleicht
+        if(spielzug.equals("a1") && a1.equals(" ") || spielzug.equals("A1") && a1.equals(" ")) {
+            a1 = player;
+            changePlayer();
+            
         }
 
-        if(spielzug.equals("a2") || spielzug.equals("A2")) {
+        if(spielzug.equals("a2") && a2.equals(" ") || spielzug.equals("A2") && a2.equals(" ")) {
             a2 = player;
             changePlayer();
+            
         }
 
-        if(spielzug.equals("a3") || spielzug.equals("A3")) {
+        if(spielzug.equals("a3") && a3.equals(" ") || spielzug.equals("A3") && a3.equals(" ")) {
             a3 = player;
             changePlayer();
+            
+        }
+
+        if(spielzug.equals("b1") && b1.equals(" ") || spielzug.equals("B1") && b1.equals(" ")) {
+            b1 = player;
+            changePlayer();
+            
+        }
+
+        if(spielzug.equals("b2") && b2.equals(" ") || spielzug.equals("B2") && b2.equals(" ")) {
+            b2 = player;
+            changePlayer();
+            
+        }
+
+        if(spielzug.equals("b3") && b3.equals(" ") || spielzug.equals("B3") && b3.equals(" ")) {
+            b3 = player;
+            changePlayer();
+            
+        }
+
+        if(spielzug.equals("c1") && c1.equals(" ") || spielzug.equals("C1") && c1.equals(" ")) {
+            c1 = player;
+            changePlayer();
+            
+        }
+
+        if(spielzug.equals("c2") && c2.equals(" ") || spielzug.equals("C2") && c2.equals(" ")) {
+            c2 = player;
+            changePlayer();
+            
+        }
+
+        if(spielzug.equals("c3") && c3.equals(" ") || spielzug.equals("C3") && c3.equals(" ")) {
+            c3 = player;
+            changePlayer();
+            
         }
     }
 
