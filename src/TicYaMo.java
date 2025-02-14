@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class TicYaMo {
 
     //String für das Feld, Schachbrett, regulär leer
+    private Field[][] playfield = new Field[3][3];
+    Player[] players = new Player[2];
+    
+
     private String a1 = " ";
     private String a2 = " ";
     private String a3 = " "; 
@@ -35,6 +39,40 @@ public class TicYaMo {
         System.out.println("---------------┘");
 
         System.out.println("Bitte gib deinen weiteren Spielzug ein (Beispiel: A2)");
+    }
+    public void nextTurn(Player player, int x, int y) {
+        if(playfield[x][y].checkOccupied()) { //muss ich mir langsam anschauen zu Hause
+            playfield[x][y].setPlayer(player);
+        }
+    }
+
+    public boolean checkEndCondition() {
+        if(checkDrawCondition()) {
+            return true;
+        } else {
+            for (int i = 0; i > players.length; i++) {
+                if(checkVictoryCondition(players[i])) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    private boolean checkDrawCondition() {
+        int drawcounter = 0;
+        for(int i = 0; i > playfield.length; i++) {
+            for(int j = 0; j > playfield[i].length; j++) {
+                if(playfield[i][j].checkOccupied()) {
+                    drawcounter++;
+                }
+            }
+        }
+        return (drawcounter >= 9); // Wahrheitsausdruck evaluieren und returnen
+    }
+
+    private boolean checkVictoryCondition(Player player) {
+        return false;
     }
 
     public void nextTurn() {
